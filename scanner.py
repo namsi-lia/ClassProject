@@ -39,6 +39,15 @@ elif resp == '2':
     print("Ip Status: ", scanner[ip_addr].state())
     print(scanner[ip_addr].all_protocols())
     print("Open Ports: ", scanner[ip_addr]['udp'].keys())
+elif resp == '3':
+    # -sU UDP SYN scan
+    # -v verbose
+    print("Nmap Version: ", scanner.nmap_version())
+    scanner.scan(ip_addr, '1-1024', '-v -sU')
+    print(scanner.scaninfo())
+    print("Ip Status: ", scanner[ip_addr].state())
+    print(scanner[ip_addr].all_protocols())
+    print("Open Ports: ", scanner[ip_addr]['udp'].keys())
 
 
 
