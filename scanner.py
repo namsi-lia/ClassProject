@@ -40,6 +40,7 @@ elif resp == '2':
     print(scanner[ip_addr].all_protocols())
     print("Open Ports: ", scanner[ip_addr]['udp'].keys())
 
-
+elif resp >='3':
+  print("please enter a valid option")
 
 
